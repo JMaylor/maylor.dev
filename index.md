@@ -15,8 +15,6 @@ hero:
 features:
   - title: Vue
     details: I love Vue
-    linkText: foo
-    link: /markdown-examples
   - title: TypeScript
     details: TypeScript is great
 ---
