@@ -7,6 +7,7 @@ export default defineConfig({
   markdown: {
     theme: { light: 'vitesse-light', dark: 'vitesse-dark' }
   },
+  cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
