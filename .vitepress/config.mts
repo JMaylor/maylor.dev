@@ -11,11 +11,32 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Blogs', link: '/blogs/index' },
+      { text: 'Projects', link: '/projects/index' }
     ],
 
+    sidebar: {
+      '/blogs': [
+        {
+          text: 'Blogs',
+          items: [
+            { text: 'Vue 3.3 Generics', link: '/blogs/vue-type-generics' },
+          ]
+        }
+      ],
+      '/projects': [
+        {
+          text: 'Projects',
+          items: [
+            { text: 'Football', link: '/projects/football' },
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/JMaylor' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/joe-maylor/' },
     ]
   }
 })
