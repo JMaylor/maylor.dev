@@ -8,6 +8,12 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
     "vitepress": "1.0.0-rc.39"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.7.2"
   }
 }
