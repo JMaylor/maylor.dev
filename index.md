@@ -8,9 +8,9 @@ hero:
   tagline: Lover of TypeScript, Vue, and all things web.
   actions:
     - text: Blogs
-      link: /markdown-examples
+      link: /blogs/index
     - text: Projects
-      link: /api-examples
+      link: /projects/index
 
 features:
   - title: Vue
