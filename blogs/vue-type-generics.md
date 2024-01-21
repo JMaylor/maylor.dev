@@ -66,7 +66,6 @@ yarn tailwindcss init -p
 ```
 :::
 
-<!-- eslint-skip -->
 ```js
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
