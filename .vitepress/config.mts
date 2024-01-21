@@ -4,6 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Joe Maylor",
   description: "Developer, lover of TypeScript, Vue, and all things web.",
+  markdown: {
+    theme: { light: 'vitesse-light', dark: 'vitesse-dark' }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
