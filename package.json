@@ -5,15 +5,27 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev",
     "build": "vitepress build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vitepress preview"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1",
-    "vitepress": "1.0.0-rc.39"
   },
   "dependencies": {
     "@vueuse/core": "^10.7.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.3",
+    "autoprefixer": "^10.4.17",
+    "eslint": "npm:eslint-ts-patch@^8.56.0-0",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.4.33",
+    "simple-git-hooks": "^2.9.0",
+    "tailwindcss": "^3.4.1",
+    "vitepress": "1.0.0-rc.39"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

@@ -1,7 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useParallax } from '@vueuse/core'
-import { useColorMode } from '@vueuse/core'
 
 const target = ref(null)
 const { tilt, roll } = useParallax(target)
@@ -29,7 +28,6 @@ const trees = computed(() => ({
 }))
 
 const night = ref(true)
-
 </script>
 
 <template>
@@ -48,7 +46,7 @@ const night = ref(true)
                     :class="night ? 'text-slate-900' : 'text-sky-500'"
                   />
                   <transition name="fade">
-                    <g id="stars" v-if="night" class="text-white fill-current">
+                    <g v-if="night" id="stars" class="text-white fill-current">
                       <path
                         id="ellipse69408"
                         d="M1255.29 158.155C1258.8 158.155 1261.63 155.677 1261.63 152.621C1261.63 149.565 1258.8 147.088 1255.29 147.088C1251.79 147.088 1248.96 149.565 1248.96 152.621C1248.96 155.677 1251.79 158.155 1255.29 158.155Z"
@@ -189,9 +187,9 @@ const night = ref(true)
                   </transition>
                   <transition name="set">
                     <g
+                      v-if="!night"
                       id="sun"
                       filter="url(#filter0_dd)"
-                      v-if="!night"
                       class="cursor-pointer"
                       @click="night = true"
                     >
@@ -203,8 +201,8 @@ const night = ref(true)
                   </transition>
                   <transition name="set">
                     <g
-                      id="moon"
                       v-if="night"
+                      id="moon"
                       filter="url(#filter1_dd)"
                       class="cursor-pointer"
                       @click="night = false"

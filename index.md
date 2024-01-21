@@ -18,4 +18,3 @@ features:
   - title: TypeScript
     details: TypeScript is great
 ---
-

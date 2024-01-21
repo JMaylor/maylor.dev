@@ -1,5 +1,5 @@
 # Vue 3.3 - Generically Typed SFCs.
- 
+
 Vue 3 continues to provide excellent type support, and since v3.3, we've been able to use generic types our component definitions. Let's dive in and see how this works, and what benefits it can bring.
 
 ## Getting Started
@@ -66,14 +66,15 @@ yarn tailwindcss init -p
 ```
 :::
 
+<!-- eslint-skip -->
 ```js
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [], // [!code --]
   content: [ // [!code ++]
-    "./index.html", // [!code ++]
-    "./src/**/*.{vue,js,ts,jsx,tsx}", // [!code ++]
+    './index.html', // [!code ++]
+    './src/**/*.{vue,js,ts,jsx,tsx}', // [!code ++]
   ], // [!code ++]
   theme: {
     extend: {},
@@ -247,7 +248,7 @@ const person = ref()
 
 <template>
   <main>
-    <VSelect :items="people" v-model="person" label="Character" value-key="id" display-key="name" />
+    <VSelect v-model="person" :items="people" label="Character" value-key="id" display-key="name" />
   </main>
 </template>
 ```
@@ -262,7 +263,7 @@ This is a problem - suppose we do change our above code by setting the `valueKey
 
 ## Generics!
 
-So, how can we fix this? You guessed it - by utilising Generics in our `VSelect` component! We want to restrict the `valueKey` to be some key of whatever we provide as the `items` prop. 
+So, how can we fix this? You guessed it - by utilising Generics in our `VSelect` component! We want to restrict the `valueKey` to be some key of whatever we provide as the `items` prop.
 i.e. if we'd have to provide `id`, `name`, or `age` for our current example.
 If we were instead choosing from a list of countries, which had the following interface:
 
